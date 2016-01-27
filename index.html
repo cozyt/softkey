@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+        <link rel="stylesheet" href="softkeys-0.0.1.css">
+
+        <style>
+            /*input[type="text"] {
+                display: bloc
+                margin: 2em auto;
+            }*/
+        </style>
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-12 jumbotron">
+        			<h1>Softkey</h1>
+                    <p>A JQuery plugin to generate a software keyboard in JavaScript</p>
+                </div>
+            </div>
+                    <form class="row form">
+                        <div class="col-sm-offset-4 col-sm-4 form-group">
+                            <input type="text" name="code" class="form-control input-lg">
+                        </div>
+
+                        <div class="softkeys" data-target="input[name='code']"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        <script src="softkeys-0.0.1.js"></script>
+
+        <script>
+            $(document).ready(function(){
+                $('.softkeys').softkeys({
+                    target : $('.softkeys').data('target'),
+                    layout : [
+                        [
+                            ['`','~'],
+                            ['1','!'],
+                            ['2','@'],
+                            ['3','#'],
+                            ['4','$'],
+                            ['5','%'],
+                            ['6','^'],
+                            ['7','&amp;'],
+                            ['8','*'],
+                            ['9','('],
+                            ['0',')'],
+                            ['-', '_'],
+                            ['=','+'],
+                            'delete'
+                        ],
+                        [
+                            'q','w','e','r','t','y','u','i','o','p',
+                            ['[','{'],
+                            [']','}']
+                        ],
+                        [
+                            'capslock',
+                            'a','s','d','f','g','h','j','k','l',
+                            [';',':'],
+                            ["'",'&quot;'],
+                            ['\\','|']
+                        ],
+                        [
+                            'shift',
+                            'z','x','c','v','b','n','m',
+                            [',','&lt;'],
+                            ['.','&gt;'],
+                            ['/','?'],
+                            ['@']
+                        ]
+                    ]
+                });
+            });
+        </script>
+    </body>
+</html>
