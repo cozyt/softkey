@@ -1,0 +1,12 @@
+{
+	"name": "cozyt/softkey",
+	"description": "",
+	"homepage": "http://bitbucket.org/cozyt/softkey",
+	"keywords": ["css", "js", "html"],
+	"authors": [
+		{
+			"name": "A Harvey",
+			"homepage": "https://bitbucket.org/cozyt"
+		}
+	]
+}
